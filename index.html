@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EditorCo-digo</title>
+  <meta name="description" content="Editor minimalista de código en línea, de principio a fin">
+  <meta property="og:url" content="index.html">
+  <meta property="og:type" content="website">
+  <!-- <meta name="robots" content="index, follow"> -->
+  <meta name="twitter:url" content="index.html">
+  <<meta name="twitter:creator" content="@imhicihu">
+  <meta name="keywords" content="editor código, editor html, editor css, editor, editor javascript">
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <div class="header-wrap">
+    <h1>EditorCo-digo</h1>
+    <h3>Editor minimalista de código en línea, de principio a fin</h3>
+  </div>
+  <div id="ide-parent">
+    <div id="button-wrapper">
+      <button onclick="switchPanel(0)">HTML</button>
+      <button onclick="switchPanel(1)">CSS</button>
+      <button onclick="switchPanel(2)">js</button>
+      <button onclick="runEdit(3)">Final</button>
+    </div>
+    <div id="ide-container">
+      <div class="panel-wrapper">
+        <div id="html">
+&lt;!--html de ejemplo, editable definitivamente--&gt;
+
+&lt;div class="circle"&gt;
+	<h1>Sorpresa!<h1>
+&lt;/div&gt;
+
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="css">
+/*CSS a modo de ejemplo, modificable definitivamente*/
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: crimson;
+	margin: auto;
+	margin-top: 50px;
+	transition-duration: 1500ms;
+}
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="js">
+//JavaScript a primer hervor, pero modificable
+
+var circle = document.querySelector(".circle");
+var bool = false;
+
+circle.addEventListener('click', function() {
+	if (!bool) {
+		circle.style.background = "green";
+		bool = true;
+	} else {
+		circle.style.background = "crimson";
+		bool = false;
+	}
+});
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <iframe id="result"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <h4>Utilizamos <a href="https://github.com/ajaxorg/ace" target="_blank">Ace</a> para el resaltado sintáctico. Los cambios se compilan y se muestran automáticamente cada vez que se hace clic en una pestaña.</h4>
+	 
+    
+	
+  </div>
+  <div class="footer">
+    <div class="inner-wrap">
+      <h4>2024<a href="https://github.com/imhicihu/EditorCo-digo">Github</a></h4>
+      <div class="icons-wrap">
+       
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
