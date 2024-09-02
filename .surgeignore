@@ -1,0 +1,5 @@
+.nova/
+.git/
+cod*.md
+security.md
+CONTRIBUTING.md
