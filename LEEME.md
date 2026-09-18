@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="images/header.webp?raw=true" alt="Logotipo de EditorCo-digo"/>
+</p>
+
+---
+
+![stability-work_in_progress](images/stability-work_in_progress.png)
+![internaluse-green](images/internal_use_Stable.png)
 
 ## Motivación / [Rationale](README.md)
 
